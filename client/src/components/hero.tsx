@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import profileImage from "@assets/Shivam Image_1755805364371.jpg";
 
 export default function Hero() {
   return (
@@ -11,8 +12,12 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center animate-fade-in">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full gradient-bg flex items-center justify-center text-white text-4xl font-bold shadow-2xl animate-bounce-subtle" data-testid="profile-avatar">
-              SV
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl animate-bounce-subtle ring-4 ring-primary ring-offset-4 ring-offset-transparent" data-testid="profile-avatar">
+              <img 
+                src={profileImage} 
+                alt="Shivam Krishan Varshney - Software Engineer"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6" data-testid="hero-title">
