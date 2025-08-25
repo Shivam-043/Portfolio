@@ -1,0 +1,908 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Krishan Varshney - Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Shivam Krishan Varshney, Software Engineer specializing in Flutter, Android Development, and Full-Stack Solutions. NIT Kurukshetra graduate with proven track record in mobile app development.">
+    <meta name="keywords" content="Software Engineer, Flutter Developer, Android Developer, Full Stack Developer, Mobile App Development, Shivam Varshney">
+    <meta name="author" content="Shivam Krishan Varshney">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Shivam Krishan Varshney - Software Engineer Portfolio">
+    <meta property="og:description" content="Portfolio showcasing software engineering expertise in Flutter, Android, and full-stack development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shivamvarshney.dev">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shivam Krishan Varshney - Software Engineer">
+    <meta name="twitter:description" content="Software Engineer specializing in mobile and full-stack development">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shivam Krishan Varshney",
+        "jobTitle": "Software Engineer",
+        "email": "shivamvarshney114@gmail.com",
+        "telephone": "+919520443591",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kurukshetra",
+            "addressRegion": "Haryana",
+            "addressCountry": "India"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "National Institute of Technology, Kurukshetra"
+        },
+        "knowsAbout": ["Flutter", "Android Development", "Java", "Dart", "JavaScript", "Python", "Spring Boot", "Node.js"],
+        "url": "https://shivamvarshney.dev"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e40af',
+                        'secondary': '#06b6d4',
+                        'accent': '#8b5cf6',
+                        'vibrant': '#f59e0b'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-subtle': 'bounceSubtle 2s infinite',
+                        'pulse-slow': 'pulse 3s infinite'
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceSubtle {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af, #06b6d4, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af, #06b6d4);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .skill-bar {
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+            width: 100px;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(400px); }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-900 overflow-x-hidden">
+    
+    <!-- @COMPONENT: Navigation [fixed header with smooth scroll] -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-bold text-xl gradient-text">SV</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-primary transition-colors duration-300">Experience</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary transition-colors duration-300">Skills</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero [main introduction section] -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center animate-fade-in">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full gradient-bg flex items-center justify-center text-white text-4xl font-bold shadow-2xl animate-bounce-subtle">
+                        SV
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text">Shivam Krishan</span><br>
+                    <span class="text-gray-800">Varshney</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-4">Software Engineer</p>
+                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+                    Passionate Flutter & Android Developer from NIT Kurukshetra, crafting exceptional mobile experiences 
+                    and leading cross-functional teams to deliver innovative solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Get In Touch
+                    </a>
+                    <a href="#experience" class="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300">
+                        <i class="fas fa-briefcase mr-2"></i>View Work
+                    </a>
+                </div>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary">100K+</div>
+                        <div class="text-sm text-gray-500">Active Users</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-secondary">4.7★</div>
+                        <div class="text-sm text-gray-500">App Rating</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-accent">500+</div>
+                        <div class="text-sm text-gray-500">LeetCode</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero -->
+
+    <!-- @COMPONENT: About [education and background] -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Education &</span> Background
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Building a strong foundation in engineering and technology through premier institutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- @COMPONENT: EducationCard [NIT Kurukshetra] -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">National Institute of Technology</h3>
+                            <p class="text-primary font-semibold mb-1">BTech, Civil Engineering</p>
+                            <p class="text-gray-600 mb-2">Kurukshetra, Haryana • 2021-2025</p>
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">Premier Institute</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">Current</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: EducationCard -->
+
+                <!-- @COMPONENT: EducationCard [Jaypee Vidya Mandir] -->
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Jaypee Vidya Mandir</h3>
+                            <p class="text-green-600 font-semibold mb-1">Central Board of Secondary School</p>
+                            <p class="text-gray-600 mb-2">Anoopshahar, Uttar Pradesh • 2018-2020</p>
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">XII & X</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">CBSE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: EducationCard -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About -->
+
+    <!-- @COMPONENT: Experience [professional experience showcase] -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Professional</span> Experience
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Leading development teams and creating impactful mobile applications
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- @COMPONENT: ExperienceCard [MEMONEET] -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                            <div class="flex items-start space-x-4 mb-4 md:mb-0">
+                                <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                                    M
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">MEMONEET</h3>
+                                    <p class="text-lg text-primary font-semibold">Android Developer Internship</p>
+                                    <p class="text-gray-600">Chennai - Remote</p>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                NOV 2023 - APRIL 2024
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-rocket text-primary mt-1"></i>
+                                    <p class="text-gray-700">Pioneered cross-functional initiative to revamp user experience, <span class="font-semibold text-primary">increasing user retention by 20%</span></p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-mobile-alt text-secondary mt-1"></i>
+                                    <p class="text-gray-700">Implemented <span class="font-semibold">5 major online exam test features</span> for enhanced user experience</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-shield-alt text-accent mt-1"></i>
+                                    <p class="text-gray-700">Optimized key functionalities leading to <span class="font-semibold text-accent">35% decrease in crash rates</span></p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-users text-vibrant mt-1"></i>
+                                    <p class="text-gray-700">Led team of <span class="font-semibold">5 Flutter developers</span>, achieved <span class="font-semibold text-vibrant">4.7-star rating</span> for 100K+ users</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ExperienceCard -->
+
+                <!-- @COMPONENT: ExperienceCard [BUKKIZ] -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                            <div class="flex items-start space-x-4 mb-4 md:mb-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                                    B
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">BUKKIZ</h3>
+                                    <p class="text-lg text-purple-600 font-semibold">Flutter Team Lead</p>
+                                    <p class="text-gray-600">Gurugram, Haryana</p>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                JAN 2023 - NOV 2023
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-cogs text-purple-500 mt-1"></i>
+                                    <p class="text-gray-700">Built full-stack ERP with e-Commerce features, <span class="font-semibold text-purple-600">improving efficiency by 40%</span></p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-chart-line text-pink-500 mt-1"></i>
+                                    <p class="text-gray-700">Integrated live test results and performance dashboards for parents</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-layer-group text-indigo-500 mt-1"></i>
+                                    <p class="text-gray-700">Created <span class="font-semibold">4 comprehensive applications</span>: User, Retailer, Admin, and Delivery Apps</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-palette text-blue-500 mt-1"></i>
+                                    <p class="text-gray-700">Expertise in Figma UI/UX design, Clean Architecture, and <span class="font-semibold">20+ Flutter features</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ExperienceCard -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Experience -->
+
+    <!-- @COMPONENT: Skills [technical skills visualization] -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Technical</span> Skills
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Proficient in modern technologies and frameworks for full-stack development
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- @COMPONENT: SkillCategory [Languages] -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Languages</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Java</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="gradient-bg h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Dart</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="gradient-bg h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">JavaScript</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="gradient-bg h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Python</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="gradient-bg h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Rust</span>
+                                <span class="text-sm text-gray-500">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="gradient-bg h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: SkillCategory -->
+
+                <!-- @COMPONENT: SkillCategory [Frameworks] -->
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Frameworks</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Flutter</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Spring Boot</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Node.js</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Express.js</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Socket.IO</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: SkillCategory -->
+
+                <!-- @COMPONENT: SkillCategory [Databases] -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Databases</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">MongoDB</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Firebase</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">PostgreSQL</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">GraphCMS</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Redis</span>
+                                <span class="text-sm text-gray-500">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: SkillCategory -->
+
+                <!-- @COMPONENT: SkillCategory [Other Technologies] -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Other Technologies</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">REST APIs</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Microservices</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">OAuth</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Kubernetes</span>
+                                <span class="text-sm text-gray-500">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-700">Agile/Scrum</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 skill-bar">
+                                <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: SkillCategory -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills -->
+
+    <!-- @COMPONENT: Leadership [positions and achievements] -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Leadership &</span> Achievements
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Demonstrating leadership skills and technical excellence beyond development
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- @COMPONENT: LeadershipCard [Positions] -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Leadership Positions</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Society President, ASCE</h4>
+                                <p class="text-primary font-semibold">2024 - 2025</p>
+                                <p class="text-gray-600 text-sm mt-1">Leading student activities and technical initiatives</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Member, AeroModelling Society</h4>
+                                <p class="text-secondary font-semibold">2021 - 2025</p>
+                                <p class="text-gray-600 text-sm mt-1">Active participation in technical projects and competitions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: LeadershipCard -->
+
+                <!-- @COMPONENT: AchievementsCard [Technical Achievements] -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-accent to-vibrant rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Technical Achievements</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl">
+                            <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">LeetCode Knight</h4>
+                                <p class="text-accent font-semibold">500+ Problems Solved</p>
+                                <p class="text-gray-600 text-sm mt-1">Global Rank 521 in Weekly Contest • 2023-2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl">
+                            <div class="w-12 h-12 bg-vibrant rounded-lg flex items-center justify-center text-white">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Excalibur Made Automate</h4>
+                                <p class="text-vibrant font-semibold">Fair Sharing App</p>
+                                <p class="text-gray-600 text-sm mt-1">Innovative mobile application development • 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: AchievementsCard -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Leadership -->
+
+    <!-- @COMPONENT: Contact [contact information and form] -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Let's</span> Connect
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ready to create something amazing together? Get in touch and let's discuss your next project.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- @COMPONENT: ContactInfo [contact details] -->
+                <div class="space-y-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Email</p>
+                                    <a href="mailto:shivamvarshney114@gmail.com" class="text-primary hover:text-secondary transition-colors">
+                                        shivamvarshney114@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-white">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Phone</p>
+                                    <a href="tel:+919520443591" class="text-primary hover:text-secondary transition-colors">
+                                        +91 9520443591
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Location</p>
+                                    <p class="text-gray-600">Kurukshetra, Haryana, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Let's Connect</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-code"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ContactInfo -->
+
+                <!-- @COMPONENT: ContactForm [message form] -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Message</h3>
+                    <form class="space-y-6" data-implementation="Should include form validation and email sending functionality">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" placeholder="john@example.com" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" placeholder="Let's work together" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-bg text-white py-4 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+                <!-- @END_COMPONENT: ContactForm -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact -->
+
+    <!-- @COMPONENT: Footer [site footer] -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold gradient-text mb-2">Shivam Krishan Varshney</h3>
+                    <p class="text-gray-400">Software Engineer • Flutter Developer • Tech Enthusiast</p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:shivamvarshney114@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="tel:+919520443591" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Shivam Krishan Varshney. All rights reserved. Built with passion and cutting-edge technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement smooth scrolling navigation, form handling, and animations
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections for scroll animations
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s ease-out';
+                observer.observe(section);
+            });
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const sections = document.querySelectorAll('section[id]');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('text-primary');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('text-primary');
+                    }
+                });
+            });
+
+            // Form submission handler placeholder
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement actual form submission logic
+                    alert('Thank you for your message! I will get back to you soon.');
+                });
+            }
+
+            // Add loading animation complete
+            window.addEventListener('load', () => {
+                document.body.classList.add('loaded');
+            });
+        })();
+    </script>
+</body>
+</html>
