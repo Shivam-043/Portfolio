@@ -19,6 +19,10 @@ export default function Hero() {
                 className="w-full h-full object-cover object-center"
               />
             </div>
+            <div className="inline-flex items-center px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-full shadow-lg animate-pulse mb-4" data-testid="availability-badge">
+              <div className="w-2 h-2 bg-white rounded-full mr-2 animate-ping"></div>
+              Available for Immediate Joining
+            </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6" data-testid="hero-title">
             <span className="gradient-text">Shivam Krishan</span><br />
