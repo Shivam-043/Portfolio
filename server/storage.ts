@@ -6,8 +6,8 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'your-email@gmail.com', // Set your email in environment variables
-    pass: process.env.EMAIL_PASS || 'your-app-password', // Use app password for Gmail
+    user: process.env.EMAIL_USER || 'your-email@gmail.com',
+    pass: process.env.EMAIL_PASS || 'your-app-password',
   },
 });
 
@@ -16,12 +16,13 @@ async function sendContactEmail(message: ContactMessage): Promise<void> {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER || 'your-email@gmail.com',
-      to: process.env.RECIPIENT_EMAIL || 'your-email@gmail.com', // Where you want to receive messages
-      subject: `New Contact Message from ${message.name}`,
+      to: process.env.RECIPIENT_EMAIL || 'your-email@gmail.com',
+      subject: `New Contact Message from ${message.firstName} ${message.lastName}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${message.name}</p>
+        <p><strong>Name:</strong> ${message.firstName} ${message.lastName}</p>
         <p><strong>Email:</strong> ${message.email}</p>
+        <p><strong>Subject:</strong> ${message.subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message.message}</p>
         <p><strong>Submitted at:</strong> ${message.createdAt.toLocaleString()}</p>
@@ -56,7 +57,12 @@ export class MemStorage implements IStorage {
 
   async createUser(insertUser: InsertUser): Promise<User> {
     const id = randomUUID();
-    const user: User = { ...insertUser, id, createdAt: new Date() };
+    // Fix the User type by only including properties that exist in the type
+    const user = { 
+      ...insertUser, 
+      id 
+    } as User;
+    
     this.users.set(id, user);
     this.usersByUsername.set(user.username, user);
 
