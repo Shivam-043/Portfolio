@@ -1,31 +1,25 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "buildCommand": "npm run build:vercel",
-        "outputDirectory": "dist/public"
-      }
-    },
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "dist/public",
+  "framework": "vite",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
+  },
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.js"
+    { 
+      "src": "/api/(.*)", 
+      "dest": "/api/$1" 
     },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|svg|pdf))",
-      "dest": "/dist/public/$1"
+    { 
+      "handle": "filesystem" 
     },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/public/index.html"
+    { 
+      "src": "/[^.]+", 
+      "dest": "/", 
+      "status": 200 
     }
   ]
 }
